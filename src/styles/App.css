@@ -84,7 +84,7 @@
   font-size: 1.5rem;
   /* margin-top: 1rem; */
   /* align-self: center; */
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -138,16 +138,11 @@
 
 .lists-container {
   flex-basis: 70%;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   margin: auto auto;
   width: 80vw;
   height: 70vh;
   display: flex;
   background-color: var(--lightGrey);
-  /* border-radius: 2% 2%; */
 }
 
 .list-item {
@@ -164,26 +159,11 @@
   border: none;
 }
 
-/* .list-item p { */
-/* border-radius: 15%; */
-/* margin: auto; */
-/* font-size: 30px; */
-/* height: 10%; */
-/* text-align: center; */
-/* width: 160px; */
-/* margin: auto; */
-/* background-color: var(--lightGrey); */
-/* } */
-
-/* .list-item .list-name {
-  border-bottom: 2px solid var(--secondColor);
-  display: block;
-} */
-
 .list-item .list-name {
-  height: 2rem;
+  height: 5%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   font-size: 1.5rem;
 }
 
@@ -193,8 +173,8 @@
 
 .list-item .task-area {
   max-width: 100%;
-  max-height: 100%;
-  /* overflow: scroll; */
+  max-height: 95%;
+  overflow-y: auto;
 }
 
 
@@ -224,14 +204,13 @@ li {
 
 }
 
-
 .task-text {
   flex-basis: 80%;
   max-width: 80%;
   flex-grow: 1;
   align-self: left;
   text-align: left;
-  /* align-self: flex-start; */
+  font-size: 1.2rem;
 }
 
 .button-container {
@@ -250,8 +229,6 @@ li {
 
 .delete-button {
   flex-basis: 50%;
-  /* flex-grow: 1; */
-  /* margin-right: 2%; */
 }
 
 .delete-button:hover {
@@ -270,13 +247,26 @@ li {
   font-size: 1.4rem;
 }
 
-
-/* .todo-item:nth-child(even) {
-  background-color: rgb(228, 228, 228);
-} */
-
 /* footer ------------------------ */
 footer {
   flex-basis: 10%;
   width: 100%;
+  /* background-color: lightgray; */
+}
+
+/* scrollbar properties ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--lightGrey);;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightgray; 
+  border-radius: 50px;
+
 }
