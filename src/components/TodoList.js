@@ -2,10 +2,14 @@ import React from "react";
 import Item from "./Item";
 
 const TodoList = ({ todos, setTodos, setStatus }) => {
-  const active = todos.filter((task) => task.status === "to-do");
-  const inprogress = todos.filter((task) => task.status === "in-progress");
-  const done = todos.filter((task) => task.status === "done");
-  // console.log(todos);
+  let active = todos.filter((task) => task.status === "to-do");
+  let inprogress = todos.filter((task) => task.status === "in-progress");
+  let done = todos.filter((task) => task.status === "done");
+
+  // todos sorting
+  active.sort((a, b) => b.important - a.important);
+  inprogress.sort((a, b) => b.important - a.important);
+  done.sort((a, b)=> b.important - a.important)
 
   // todos filter
   let activeItems = active.map((task) => (
