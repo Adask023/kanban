@@ -37,14 +37,16 @@ const Item = ({ todos, setTodos, task }) => {
       >
         {task.text}
       </div>
-      {task.status !== "done" ? (
-        <button onClick={changeStatus} className="next-button">
-          <i className="fas fa-arrow-right"></i>
+      <div className="button-container">
+        <button onClick={deleteItem} className="delete-button">
+          <i className="far fa-trash-alt"></i>
         </button>
-      ) : null}
-      <button onClick={deleteItem} className="delete-button">
-      <i className="far fa-trash-alt"></i>
-      </button>
+        {task.status !== "done" ? (
+          <button onClick={changeStatus} className="next-button">
+            <i className="fas fa-arrow-right"></i>
+          </button>
+        ) : null}
+      </div>
     </li>
   );
 };

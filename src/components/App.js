@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import TodoList from "./TodoList";
-import "./App.css";
+import "../styles/App.css";
 
 function App() {
   // hooks declarations:
@@ -9,6 +9,27 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("");
   const [important, setImportant] = useState(false);
+
+  useEffect(() => {
+    getLocalTodos();
+  }, []);
+
+  useEffect(() => {
+    saveLocalTodos();
+  }, [todos]);
+
+  const saveLocalTodos = () => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem("todos"));
+      setTodos(todoLocal);
+    }
+  };
 
   return (
     <div className="App">

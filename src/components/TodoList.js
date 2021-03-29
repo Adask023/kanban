@@ -8,7 +8,7 @@ const TodoList = ({ todos, setTodos, setStatus }) => {
   // console.log(todos);
 
   // todos filter
-  const activeItems = active.map((task) => (
+  let activeItems = active.map((task) => (
     <Item
       key={task.id}
       todos={todos}
@@ -39,18 +39,31 @@ const TodoList = ({ todos, setTodos, setStatus }) => {
   return (
     <div className="lists-container">
       <div className="list-item to-do-list">
-        <p>To do tasks</p>
-        <div>{activeItems}</div>
+        <div className="list-name">
+          <p>To do</p>
+        </div>
+
+        <div className="task-area">
+          <div>{activeItems}</div>
+        </div>
       </div>
 
       <div className="list-item in-progress-list">
-        <p>In progress</p>
-        <ul>{inprogressItems}</ul>
+        <div className="list-name">
+          <p>In progress</p>
+        </div>
+        <div className="task-area">
+          <ul>{inprogressItems}</ul>
+        </div>
       </div>
 
       <div className="list-item done-list">
-        <p>Done tasks</p>
-        <ul>{doneItems}</ul>
+        <div className="list-name">
+          <p>Done</p>
+        </div>
+        <div className="task-area">
+          <ul>{doneItems}</ul>
+        </div>
       </div>
     </div>
   );

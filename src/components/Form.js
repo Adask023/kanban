@@ -39,7 +39,9 @@ const Form = ({
   return (
     <div className="form-container">
       <form className="form">
-        <p className="logo-wrapper">Add task</p>
+        <div className="logo-wrapper">
+          <p>Add task</p>
+        </div>
 
         <div className="input-wrapper">
           <input
