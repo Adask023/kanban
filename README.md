@@ -2,7 +2,6 @@
 Wykonana w Create React App
 
 
-instrukcja ↓
 
 # Getting Started with Create React App
 
