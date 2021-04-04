@@ -31,7 +31,7 @@
 .form-container {
   flex-basis: 20%;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   justify-self: center;
   /* margin-top: 2%; */
   /* margin: auto auto; */
@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .logo-wrapper {
@@ -80,7 +80,7 @@
 .checkbox-wrapper {
   /* padding-top: 1em; */
   flex-basis: 40%;
-  width: 10rem;
+  /* width: 10rem; */
   font-size: 1.5rem;
   /* margin-top: 1rem; */
   /* align-self: center; */
@@ -95,7 +95,7 @@
   /* margin-top: 1em; */
   font-size: 1.5rem;
   padding: 10px 10px;
-  /* width: 80%; */
+  width: 90%;
   flex-basis: 90%;
   border: none;
   /* height: 50%; */
@@ -129,7 +129,7 @@
 
 .add-task-btn:hover {
   /* box-shadow: 0px 0px 4px 1px var(--secondColor); */
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 
@@ -174,7 +174,7 @@
 .list-item .task-area {
   max-width: 100%;
   max-height: 95%;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 
@@ -199,14 +199,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   border-left: 2px solid var(--secondColor);
 
 }
 
 .task-text {
-  flex-basis: 80%;
-  max-width: 80%;
+  flex-basis: 75%;
+  max-width: 75%;
   flex-grow: 1;
   align-self: left;
   text-align: left;
@@ -261,12 +261,59 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--lightGrey);;
+  background-color: var(--lightGrey);
+  ;
   border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: lightgray; 
+  background-color: lightgray;
   border-radius: 50px;
+
+}
+
+
+/* media queries -------------------- */
+@media all and (max-width: 1000px) {
+  .lists-container {
+    width: 100vw;
+  }
+
+  .list-item {
+    font-size: 0.4rem;
+  }
+
+  .input-wrapper {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .App {
+    height: 200vh;
+  }
+
+  .form-container {
+    flex-basis: 10%;
+  }
+
+  .lists-container {
+    flex-basis: 90%;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* flex-basis: 85%; */
+  }
+
+  .list-item {
+    /* width: 100%; */
+    flex-basis: 100%;
+    max-width: 100vw;
+    max-height: 33.33%;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
 
 }
