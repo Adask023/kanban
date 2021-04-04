@@ -1,4 +1,4 @@
-#Aplikacja Kanban
+# Aplikacja Kanban
 Wykonana w Create React App
 
 
