@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import TodoList from "./TodoList";
+import Footer from "./Footer";
 import "../styles/App.css";
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
         status={status}
         setStatus={setStatus}
       />
-      <footer></footer>
+      <Footer/>
     </div>
   );
 }
