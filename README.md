@@ -1,5 +1,5 @@
 # Aplikacja Kanban
-Wykonana w Create React App
+Please visit https://adask023.github.io/kanban/
 
 
 
